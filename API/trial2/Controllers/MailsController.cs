@@ -29,7 +29,7 @@ namespace trial2.Controllers
         public async Task<ActionResult<string>> PostMail(Mail mail)
         {
             MailMessage message = new MailMessage(
-                "caogest@outlook.com",
+                "",
                 mail.email,
                 mail.assunto,
                 mail.texto);
@@ -38,7 +38,7 @@ namespace trial2.Controllers
             client.Port = 587;
             client.UseDefaultCredentials = false;
             client.EnableSsl = true;
-            System.Net.NetworkCredential basicAuthenticationInfo = new System.Net.NetworkCredential("caogest@outlook.com", "LaboratoriosI4");
+            System.Net.NetworkCredential basicAuthenticationInfo = new System.Net.NetworkCredential("", "");
             client.Credentials = basicAuthenticationInfo;
             await client.SendMailAsync(message);
             client.Dispose();
