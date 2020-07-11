@@ -297,7 +297,7 @@ namespace trial2.Controllers
             client.Port = 587;
             client.UseDefaultCredentials = false;
             client.EnableSsl = true;
-            System.Net.NetworkCredential basicAuthenticationInfo = new System.Net.NetworkCredential("caogest@outlook.com", "LaboratoriosI4");
+            System.Net.NetworkCredential basicAuthenticationInfo = new System.Net.NetworkCredential(/* EMAIL */, /* PASSWORD */);
             client.Credentials = basicAuthenticationInfo;
             await client.SendMailAsync(message);
             client.Dispose();
