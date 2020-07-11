@@ -37,7 +37,7 @@ namespace trial2
             //services.AddCors(options => options.AddPolicy(MyPolicy,builder => builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod()));
 
             string server = "";
-            string database = ;
+            string database = "";
             string dbId = "";
             string dbPassword = "";
             string connectionString;
