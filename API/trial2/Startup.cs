@@ -36,10 +36,10 @@ namespace trial2
         {
             //services.AddCors(options => options.AddPolicy(MyPolicy,builder => builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod()));
 
-            string server = "caogestli.mysql.database.azure.com";
-            string database = "caogest";
-            string dbId = "host@caogestli";
-            string dbPassword = "AzureLI4";
+            string server = "";
+            string database = ;
+            string dbId = "";
+            string dbPassword = "";
             string connectionString;
             connectionString = "server=" + server + ";" + "database=" +
             database + ";" + "uid=" + dbId + ";" + "password=" + dbPassword + ";";
