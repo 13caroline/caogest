@@ -46,9 +46,7 @@ namespace trial2.Controllers
             return canil_has_Parceria;
         }
 
-        // PUT: api/CP/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/CP/id
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCanil_has_Parceria(string id, Canil_has_Parceria canil_has_Parceria)
         {
@@ -79,8 +77,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/CP
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Canil_has_Parceria>> PostCanil_has_Parceria(Canil_has_Parceria canil_has_Parceria)
         {
@@ -104,7 +100,7 @@ namespace trial2.Controllers
             return CreatedAtAction("GetCanil_has_Parceria", new { id = canil_has_Parceria.canil_user_email }, canil_has_Parceria);
         }
 
-        // DELETE: api/CP/5
+        // DELETE: api/CP/id
         [HttpDelete("{id}")]
         public async Task<ActionResult<Canil_has_Parceria>> DeleteCanil_has_Parceria(string id)
         {
