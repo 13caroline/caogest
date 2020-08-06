@@ -70,7 +70,7 @@ namespace trial2.Controllers
             return result;
         }
 
-        // GET: api/Favoritos/5
+        // GET: api/Favoritos/id
         [HttpGet("{id}")]
         public async Task<ActionResult<List<ReturnFavoritos>>> GetFavoritos(string id)
         {
@@ -118,9 +118,7 @@ namespace trial2.Controllers
             return result;
         }
 
-        // PUT: api/Favoritos/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Favoritos/id
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFavoritos(string id, Favoritos favoritos)
         {
@@ -151,8 +149,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/Favoritos
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Favoritos>> PostFavoritos(Favoritos favoritos)
         {
@@ -176,7 +172,7 @@ namespace trial2.Controllers
             return CreatedAtAction("GetFavoritos", new { id = favoritos.utilizador_user_email }, favoritos);
         }
 
-        // DELETE: api/Favoritos/5
+        // DELETE: api/Favoritos/String/id
         [HttpDelete("{id1}/{id2}")]
         public async Task<ActionResult<Favoritos>> DeleteFavoritos(string id1, int id2)
         {
