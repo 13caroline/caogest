@@ -156,7 +156,7 @@ export default {
             titulo: "",
             texto: "", 
             url:"",
-            user_email:"admincaogest@caogest.pt",
+            user_email:/* EMAIL */,
             nota1:"", 
             nota2:"", 
         },  
