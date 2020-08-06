@@ -76,7 +76,7 @@ namespace trial2.Controllers
             return adocoes;
         }
 
-        // GET: api/Adocoes/5
+        // GET: api/Adocoes/id
         [HttpGet("{id}")]
         public async Task<ActionResult<ReturnAdo>> GetAdocao(int id)
         {
@@ -136,9 +136,7 @@ namespace trial2.Controllers
             return res;
         }
 
-        // PUT: api/Adocoes/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Adocoes/id
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAdocao(int id, RecieveAdo adocao)
         {
@@ -191,8 +189,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/Adocoes
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Adocao>> PostAdocao(RecieveAdo adocao)
         {
@@ -225,7 +221,7 @@ namespace trial2.Controllers
             return CreatedAtAction(nameof(GetAdocao), new { id = res.nPedido }, adocao);
         }
 
-        // DELETE: api/Adocoes/5
+        // DELETE: api/Adocoes/id
         [HttpDelete("{id}")]
         public async Task<ActionResult<Adocao>> DeleteAdocao(int id)
         {
