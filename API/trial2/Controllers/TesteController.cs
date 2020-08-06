@@ -21,12 +21,10 @@ namespace trial2.Controllers
         }
 
         // POST: api/Teste
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<String>> PostAdocao(IFormFile file)
         {
-            using (var stream = System.IO.File.Create("/Users/carolina/Desktop/LI/caogest/src/assets/" + file.FileName))
+            using (var stream = System.IO.File.Create(/* PATH */ + file.FileName))
             {
                 await file.CopyToAsync(stream);
             }
