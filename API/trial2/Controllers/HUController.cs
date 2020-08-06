@@ -30,7 +30,7 @@ namespace trial2.Controllers
             return await _context.Horarios_has_Utilizador.ToListAsync();
         }
 
-        // GET: api/HU/5
+        // GET: api/HU/id
         [HttpGet("{id}")]
         public async Task<ActionResult<List<ReturnHU>>> GetHorarios_has_Utilizador(string id)
         {
@@ -65,7 +65,7 @@ namespace trial2.Controllers
             return horarios_has_Utilizador;
         }
 
-        // GET: api/HU/5/2/1
+        // GET: api/HU/Email/Dia/Email
         [HttpGet("{id1}/{id2}/{id3}")]
         public async Task<ActionResult<List<Horario_has_Utilizador>>> GetHorarios_has_Utilizador(string id1, string id2, string id3)
         {
@@ -81,9 +81,7 @@ namespace trial2.Controllers
             return horarios_has_Utilizador;
         }
 
-        // PUT: api/HU/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/HU/id
         [HttpPut("{id}")]
         public async Task<IActionResult> PutHorarios_has_Utilizador(DateTime id, Horario_has_Utilizador horarios_has_Utilizador)
         {
@@ -114,8 +112,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/HU
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Horario_has_Utilizador>> PostHorarios_has_Utilizador(Horario_has_Utilizador horarios_has_Utilizador)
         {
@@ -144,7 +140,7 @@ namespace trial2.Controllers
             return CreatedAtAction("GetHorarios_has_Utilizador", new { id = horarios_has_Utilizador.horario_DataInicio }, horarios_has_Utilizador);
         }
 
-        // DELETE: api/HU/5
+        // DELETE: api/HU/id
         [HttpDelete("{id}")]
         public async Task<ActionResult<Horario_has_Utilizador>> DeleteHorarios_has_Utilizador(DateTime id)
         {
