@@ -48,7 +48,7 @@ namespace trial2.Controllers
             return utilizadores;
         }
 
-        // GET: api/Utilizadors/5
+        // GET: api/Utilizadors/Email
         [HttpGet("{id}")]
         public async Task<ActionResult<Utilizador>> GetUtilizador(string id)
         {
@@ -74,9 +74,7 @@ namespace trial2.Controllers
             return utilizador;
         }
 
-        // PUT: api/Utilizadors/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Utilizadors/Email
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUtilizador(string id, Utilizador utilizador)
         {
@@ -113,8 +111,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/Utilizadors
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         [AllowAnonymous]
         public async Task<ActionResult<Utilizador>> PostUtilizador(ReciveUser utilizadorF)
@@ -170,7 +166,7 @@ namespace trial2.Controllers
             return CreatedAtAction(nameof(GetUtilizador), new { id = utilizador.email }, utilizador);
         }
 
-        // DELETE: api/Utilizadors/5
+        // DELETE: api/Utilizadors/Email
         [HttpDelete("{id}")]
         public async Task<ActionResult<Utilizador>> DeleteUtilizador(string id)
         {
