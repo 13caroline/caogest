@@ -23,7 +23,7 @@ namespace trial2.Controllers
             _context = context;
         }
 
-        // GET: api/AdocoesUtilizador/5
+        // GET: api/AdocoesUtilizador/id
         [HttpGet("{id}")]
         public async Task<ActionResult<List<ReturnAdo2>>> GetAdocao(string id)
         {
