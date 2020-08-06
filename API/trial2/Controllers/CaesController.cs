@@ -70,7 +70,7 @@ namespace trial2.Controllers
             return result;
         }
 
-        // GET: api/Caes/5
+        // GET: api/Caes/id
         [HttpGet("{id}")]
         public async Task<ActionResult<ReturnCao>> GetCao(int id)
         {
@@ -112,9 +112,7 @@ namespace trial2.Controllers
             return res;
         }
 
-        // PUT: api/Caes/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Caes/id
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCao(int id, Cao cao)
         {
@@ -144,9 +142,7 @@ namespace trial2.Controllers
             return NoContent();
         }
 
-        // PUT: api/Caes/Adocao/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Caes/Adocao/id
         [HttpPut("Adocao/{id}")]
         public async Task<IActionResult> PutCaoEsp(int id, Cao caoEs)
         {
@@ -182,9 +178,7 @@ namespace trial2.Controllers
             return NoContent();
         }
 
-        // PUT: api/Caes/Update/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Caes/Update/id
         [HttpPut("Update/{id}")]
         public async Task<IActionResult> PutCaoEsp1(int id, RecieveCao caoEs)
         {
@@ -222,8 +216,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/Caes
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Cao>> PostCao(RecieveCao cao)
         {
@@ -265,7 +257,7 @@ namespace trial2.Controllers
             return CreatedAtAction(nameof(GetCao), new { id = res.idCao }, res);
         }
 
-        // DELETE: api/Caes/5
+        // DELETE: api/Caes/id
         [HttpDelete("{id}")]
         public async Task<ActionResult<Cao>> DeleteCao(int id)
         {
