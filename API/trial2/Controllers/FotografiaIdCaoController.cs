@@ -23,7 +23,7 @@ namespace trial2.Controllers
             _context = context;
         }
 
-        // GET: api/Fotografias/5
+        // GET: api/Fotografias/id
         [HttpGet("{id}")]
         public async Task<ActionResult<List<Fotografia>>> GetFotografia(int id)
         {
