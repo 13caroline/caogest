@@ -23,7 +23,7 @@ namespace trial2.Controllers
             _context = context;
         }
 
-        // GET: api/CaesEmailCanil/5
+        // GET: api/CaesEmailCanil/Email
         [HttpGet("{id}")]
         public async Task<ActionResult<List<ReturnCao>>> GetCao(string id)
         {
