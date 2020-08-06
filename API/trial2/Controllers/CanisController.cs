@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 using trial2.Models;
 using trial2.Results;
 using MailKit.Net.Smtp;
-//using MailKit;
 using MimeKit;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 using MailKit.Security;
