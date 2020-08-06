@@ -295,7 +295,7 @@ import store from '@/store.js'
             this.sets.push({ b:response1.data })
           }
           for (i = 0; i < this.sets.length; i++){
-                let response2 = await axios.post("https://maps.googleapis.com/maps/api/geocode/json?address="+ this.sets[i].b +"&key=AIzaSyDo30UCma5RRXnpbvwvovMpOJiCQO8yTRY")
+                let response2 = await axios.post("https://maps.googleapis.com/maps/api/geocode/json?address="+ this.sets[i].b +"&key=/* KEY */")
                 const marker = {
                     lat: response2.data.results[0].geometry.location.lat,
                     lng: response2.data.results[0].geometry.location.lng
