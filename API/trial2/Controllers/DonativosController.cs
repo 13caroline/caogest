@@ -51,7 +51,7 @@ namespace trial2.Controllers
             return donativos;
         }
 
-        // GET: api/Donativos/5
+        // GET: api/Donativos/id
         [HttpGet("{id}")]
         public async Task<ActionResult<List<Donativos>>> GetDonativos(string id)
         {
@@ -81,9 +81,8 @@ namespace trial2.Controllers
             return donativos;
         }
 
-        // GET: api/Donativos/Info/5
+        // GET: api/Donativos/Info/id
         [HttpGet("Info/{id}")]
-        //[AllowAnonymous]
         public async Task<ActionResult<ReturnDonativos2>> GetInfoDonativos(int id)
         {
             var donativo = await (from d in _context.Donativos
@@ -131,9 +130,7 @@ namespace trial2.Controllers
             return res;
         }
 
-        // PUT: api/Donativos/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Donativos/id
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDonativos(int id, Donativos donativos)
         {
@@ -163,9 +160,7 @@ namespace trial2.Controllers
             return NoContent();
         }
 
-        // PUT: api/Donativos/Id
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Donativos/id
         [HttpPost("Id")]
         public async Task<ActionResult<int>> GetIDDonativos(RecieveDon donativos)
         {
@@ -188,8 +183,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/Donativos
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Donativos>> PostDonativos(ReceiveDonativo donativosF)
         {
@@ -234,7 +227,7 @@ namespace trial2.Controllers
             return CreatedAtAction("GetDonativos", new { id = donativos.id }, donativos);
         }
 
-        // DELETE: api/Donativos/5
+        // DELETE: api/Donativos/id
         [HttpDelete("{id}")]
         public async Task<ActionResult<Donativos>> DeleteDonativos(int id)
         {
