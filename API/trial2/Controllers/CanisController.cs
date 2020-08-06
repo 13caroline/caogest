@@ -58,7 +58,7 @@ namespace trial2.Controllers
             return canis;
         }
 
-        // GET: api/Canis/5
+        // GET: api/Canis/Email
         [HttpGet("{id}")]
         [AllowAnonymous]
         public async Task<ActionResult<ReturnCanil>> GetCanil(string id)
@@ -105,9 +105,7 @@ namespace trial2.Controllers
             return res;
         }
 
-        // PUT: api/Canis/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Canis/Email
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCanil(string id, RecieveCanil1 canilF)
         {
@@ -154,8 +152,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/Canis
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult<Canil>> PostCanil(RecieveCanil canilF)
@@ -281,11 +277,11 @@ namespace trial2.Controllers
         public async Task<ActionResult<string>> SendMail(RecieveMail info)
         {
 
-            var aux = "/Users/carolina/Downloads/" + info.nome;
+            var aux = /* PATH */  + info.nome;
 
 
             MailMessage message = new MailMessage(
-                 "caogest@outlook.com",
+                 /* EMAIL */,
                  info.mail,
                  "Emissão Recibo Eletrónico - Donativo Monetário",
                  "");
@@ -309,7 +305,7 @@ namespace trial2.Controllers
             return "Worked";
         }
 
-        //POST: api/Canis/String
+        //POST: api/Canis/Email
         [HttpPost("String")]
         [AllowAnonymous]
         public async Task<ActionResult<string>> FormatString(Canil address)
@@ -318,7 +314,7 @@ namespace trial2.Controllers
             return res;
         }
 
-        // DELETE: api/Canis/5
+        // DELETE: api/Canis/Email
         [HttpDelete("{id}")]
         public async Task<ActionResult<Canil>> DeleteCanil(string id)
         {
