@@ -70,7 +70,7 @@ namespace trial2.Controllers
             return vol;
         }
 
-        // GET: api/Voluntarios/5
+        // GET: api/Voluntarios/Email
         [HttpGet("{id}")]
         public async Task<ActionResult<List<ReturnVoluntario>>> GetVoluntarios(string id)
         {
@@ -120,7 +120,7 @@ namespace trial2.Controllers
 
         }
 
-        // GET: api/Voluntarios/Utilizador/5
+        // GET: api/Voluntarios/Utilizador/Email
         [HttpGet("Utilizador/{id}")]
         public async Task<ActionResult<List<ReturnVoluntario>>> GetVoluntariosU(string id)
         {
@@ -158,9 +158,7 @@ namespace trial2.Controllers
 
         }
 
-        // PUT: api/Voluntarios/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Voluntarios/Email
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVoluntarios(string id, Voluntarios voluntarios)
         {
@@ -191,8 +189,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/Voluntarios
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Voluntarios>> PostVoluntarios(Voluntarios voluntarios)
         {
@@ -216,7 +212,7 @@ namespace trial2.Controllers
             return CreatedAtAction("GetVoluntarios", new { id = voluntarios.canil_user_email }, voluntarios);
         }
 
-        // DELETE: api/Voluntarios/5/3
+        // DELETE: api/Voluntarios/Email/Email
         [HttpDelete("{id1}/{id2}")]
         public async Task<ActionResult<Voluntarios>> DeleteVoluntarios(string id1, string id2)
         {
