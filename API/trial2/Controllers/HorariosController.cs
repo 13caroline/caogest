@@ -29,44 +29,27 @@ namespace trial2.Controllers
             {
                 if (y == null)
                 {
-                    // If x is null and y is null, they're
-                    // equal.
                     return 0;
                 }
                 else
                 {
-                    // If x is null and y is not null, y
-                    // is greater.
                     return -1;
                 }
             }
             else
             {
-                // If x is not null...
-                //
                 if (y == null)
-                // ...and y is null, x is greater.
                 {
                     return 1;
                 }
                 else
                 {
-                    // ...and y is not null, compare the
-                    // days of both Horario.
-                    //
-
                     if (x.dia < y.dia)
                     {
-                        // If the day x is smaller then day y,
-                        // y is greater.
-                        //
                         return -1;
                     }
                     else
                     {
-                        // If the day x is bigger then day y,
-                        // x is greater.
-                        //
                         return 1;
                     }
                 }
@@ -84,7 +67,7 @@ namespace trial2.Controllers
             return horarios;
         }
 
-        // GET: api/Horarios/email
+        // GET: api/Horarios/Email
         [HttpGet("{id}")]
         public async Task<ActionResult<List<Horario>>> GetHorario(string id)
         {
@@ -100,9 +83,7 @@ namespace trial2.Controllers
             return horario;
         }
 
-        // PUT: api/Horarios/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Horarios/id
         [HttpPut("{id}")]
         public async Task<IActionResult> PutHorario(DateTime id, Horario horario)
         {
@@ -132,9 +113,7 @@ namespace trial2.Controllers
             return NoContent();
         }
 
-        // PUT: api/Horarios/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Horarios/id/Dia
         [HttpPut("{id}/{dia}")]
         public async Task<IActionResult> PutHorario1(string id, int dia, ReceiveHorario horario1)
         {
@@ -181,8 +160,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/Horarios
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Horario>> PostHorario(Horario hora)
         {
@@ -214,7 +191,7 @@ namespace trial2.Controllers
             return CreatedAtAction(nameof(GetHorario), new { id = horario.dataInicio }, horario);
         }
 
-        // DELETE: api/Horarios/5
+        // DELETE: api/Horarios/id
         [HttpDelete("{id}")]
         public async Task<ActionResult<Horario>> DeleteHorario(DateTime id)
         {
