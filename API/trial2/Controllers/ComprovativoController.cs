@@ -30,7 +30,7 @@ namespace trial2.Controllers
             return await _context.Comprovativo.ToListAsync();
         }
 
-        // GET: api/Comprovativos/5
+        // GET: api/Comprovativos/id
         [HttpGet("{id}")]
         public async Task<ActionResult<Comprovativo>> GetComprovativo(int id)
         {
@@ -46,9 +46,7 @@ namespace trial2.Controllers
             return comprovativo;
         }
 
-        // PUT: api/Comprovativos/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Comprovativos/id
         [HttpPut("{id}")]
         public async Task<IActionResult> PutComprovativo(int id, Comprovativo comprovativo)
         {
@@ -78,9 +76,7 @@ namespace trial2.Controllers
             return NoContent();
         }
 
-        // POST: api/Comprovativos/tmp@trial.com
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // POST: api/Comprovativos/Email
         [HttpPost("{mail}")]
         public async Task<ActionResult<List<Adocao>>> PostComprovativo(string mail, IFormFile file)
         {
@@ -106,7 +102,7 @@ namespace trial2.Controllers
 
             comprovativo.path = file.FileName;
 
-            using (var stream = System.IO.File.Create("/Users/carolina/Desktop/LI/caogest/public/images/" + file.FileName))
+            using (var stream = System.IO.File.Create(/* PATH */ + file.FileName))
             {
                 await file.CopyToAsync(stream);
             }
@@ -119,7 +115,7 @@ namespace trial2.Controllers
             return CreatedAtAction(nameof(GetComprovativo), new { id = comprovativo.idComprovativo }, comprovativo);
         }
 
-        // DELETE: api/Comprovativos/5
+        // DELETE: api/Comprovativos/id
         [HttpDelete("{id}")]
         public async Task<ActionResult<Comprovativo>> DeleteComprovativo(int id)
         {
