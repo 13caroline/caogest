@@ -24,7 +24,7 @@ namespace trial2.Controllers
         }
 
 
-        // GET: api/AdocoesCanil/5
+        // GET: api/AdocoesCanil/Email
         [HttpGet("{id}")]
         public async Task<ActionResult<List<ReturnAdo>>> GetAdocao(string id)
         {
