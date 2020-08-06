@@ -31,7 +31,7 @@ namespace trial2.Controllers
             return await _context.Fotografia.ToListAsync();
         }
 
-        // GET: api/Fotografias/5
+        // GET: api/Fotografias/id
         [HttpGet("{id}")]
         public async Task<ActionResult<Fotografia>> GetFotografia(int id)
         {
@@ -47,9 +47,7 @@ namespace trial2.Controllers
             return fotografia;
         }
 
-        // PUT: api/Fotografias/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Fotografias/id
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFotografia(int id, Fotografia fotografia)
         {
@@ -105,7 +103,7 @@ namespace trial2.Controllers
             return CreatedAtAction("GetFotografia", new { id = fotografia.idFotografia }, fotografia);
         }
 
-        // DELETE: api/Fotografias/5
+        // DELETE: api/Fotografias/id
         [HttpDelete("{id}")]
         public async Task<ActionResult<Fotografia>> DeleteFotografia(int id)
         {
