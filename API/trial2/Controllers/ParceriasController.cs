@@ -31,7 +31,7 @@ namespace trial2.Controllers
             return await _context.Parceria.ToListAsync();
         }
 
-        // GET: api/Parcerias/5
+        // GET: api/Parcerias/id
         [HttpGet("{id}")]
         public async Task<ActionResult<Parceria>> GetParceria(int id)
         {
@@ -49,9 +49,7 @@ namespace trial2.Controllers
 
 
 
-        // PUT: api/Parcerias/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Parcerias/id
         [HttpPut("{id}")]
         public async Task<IActionResult> PutParceria(int id, Parceria parceria)
         {
@@ -82,8 +80,6 @@ namespace trial2.Controllers
         }
 
         // POST: api/Parcerias
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         [AllowAnonymous]
         public async Task<ActionResult<Canil_has_Parceria>> PostParceria(RecieveParceria parceria)
@@ -120,7 +116,7 @@ namespace trial2.Controllers
             //return par;
         }
 
-        // DELETE: api/Parcerias/5
+        // DELETE: api/Parcerias/id
         [HttpDelete("{id}")]
         public async Task<ActionResult<Parceria>> DeleteParceria(int id)
         {
