@@ -4,7 +4,7 @@
   <img src="https://github.com/13caroline/caogest/blob/master/presentation/caogest/src/assets/logoA5.png" height="200" width="250" >
 </p>
 
-CaoGest is a progressive web application whose main purposes are to assist the user in managing registered kennels, as well as in finding their ideal dog for adoption.
+CaoGest is a progressive web application whose main purposes are to assist the user in managing registered kennels, as well as in finding their ideal dog for adoption ([Technical report](https://github.com/13caroline/caogest/blob/master/relat%C3%B3rio.pdf)).
 
 ## Development 
 
