@@ -14,7 +14,7 @@ Vue.use(VueGeolocation)
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyAxt5MfGNyDFT3fV3ec-HITeVRzQSO00L0',
+    key: /*PASS*/,
     libraries: 'places', // This is required if you use the Autocomplete plugin
     // OR: libraries: 'places,drawing'
     // OR: libraries: 'places,drawing,visualization'
