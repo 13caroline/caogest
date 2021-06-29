@@ -29,7 +29,7 @@ It was possible to find the following functions in different sites hosted in Por
 | [Carolina Cunha](https://github.com/13caroline)  	|
 | [Hugo Faria](https://github.com/KHiro13)      	|
 | [João Diogo Mota](https://github.com/JoaoDiogoMota) 	|
-| [Pedro Silva](https://github.com/Th0l)   	|
+| [Pedro Silva](https://github.com/PSilva3)   	|
 | Sérgio Gomes 	|
 
 > <img src="https://seeklogo.com/images/U/Universidade_do_Minho-logo-CB2F98451C-seeklogo.com.png" align="left" height="48" width="48" > University of Minho, Software Engineering (3rd Year).
