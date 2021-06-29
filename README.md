@@ -1,4 +1,4 @@
-# CaoGest
+# CãoGest
 
 <p align="center">
   <img src="https://github.com/13caroline/caogest/blob/master/presentation/caogest/src/assets/logoA5.png" height="200" width="250" >
